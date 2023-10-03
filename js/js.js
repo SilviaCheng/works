@@ -244,18 +244,9 @@ function goResize() {
     PageWidth = WIN.innerWidth();
 
     if (PageWidth <= 960) {
-       
-       // $("#wrapper_m").css('display','block');
-       // $("#wrapper").css('display','none');
-        //$(".hi").css("background-image:","url(../images/hi_m.png)");
-        //$("#hi").attr("src", "images/hi_m.png");
+        location.href="https://silviacheng.github.io/works/mobile.html";
 
     } else if (PageWidth >= 960) {
-        //$("#wrapper_m").css('display','none');
-        //$("#wrapper").css('display','block');
-
-        //$(".hi").css("background-image:","url(../images/hi.png)");
-        //$("#hi").attr("src", "images/hi.png");
 
     }
 
