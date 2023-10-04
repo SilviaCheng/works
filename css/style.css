@@ -2212,8 +2212,35 @@ body {
   overflow: auto;
 }
 
-.wrapper_m {
-  display: none;
+/*////*/
+.loading {
+  position: fixed;
+  background-color: #a4c4e3;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.loading .loading_img {
+  position: relative;
+  width: 150px;
+  height: 152px;
+  top: 40%;
+  left: 50%;
+  margin: -75px 0 0 -76px;
+}
+
+.loading .loading_img p {
+  color: #fff;
+  font-family: Arial;
+  font-size: 25px;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 156px 0 0 25px;
 }
 
 .wrapper {
@@ -2224,26 +2251,30 @@ body {
 .wrapper #cloud1 {
   position: absolute;
   top: 100px;
-  left: 0px;
+  left: -100px;
   z-index: 1;
+  opacity: 0;
 }
 .wrapper #cloud2 {
   position: absolute;
   top: 50px;
-  left: 1150px;
+  left: 1250px;
   z-index: 1;
+  opacity: 0;
 }
 .wrapper #cloud3 {
   position: absolute;
   top: 680px;
-  left: -100px;
+  left: -200px;
   z-index: 1;
+  opacity: 0;
 }
 .wrapper #cloud4 {
   position: absolute;
   top: 1300px;
   left: 880px;
   z-index: 1;
+  opacity: 0;
 }
 .wrapper #cloud5 {
   position: absolute;
@@ -2362,20 +2393,22 @@ main .about .intro {
 }
 main .about .intro .hi {
   position: absolute;
-  top: 80px;
+  top: -80px;
   left: 203px;
   width: 940px;
   height: 550px;
   background-image: url("../images/hi.png");
+  opacity: 0;
   z-index: 7;
 }
 main .about .intro .pic {
   position: absolute;
-  top: 545px;
+  top: 1045px;
   left: 410px;
   width: 543px;
   height: 463px;
   background-image: url("../images/pic.png");
+  opacity: 0;
   z-index: 5;
 }
 main .works {
