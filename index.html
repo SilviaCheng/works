@@ -4,17 +4,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>鄭馨蘭作品集 SilviaCheng's Works</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <!--手機版跳轉-->
-        <script type="text/javascript">
-            var WHAT = navigator.userAgent;
-        
-            if (WHAT.match(/(iPhone|iPod|Android)/)) {
-                window.location = "mobile.html";
-            }
-            </script>
+    <!--手機版跳轉-->
+    <script type="text/javascript">
+      var WHAT = navigator.userAgent;
+
+      if (WHAT.match(/(iPhone|iPod|Android)/)) {
+        window.location = "mobile.html";
+      }
+    </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="js/preloadjs-0.4.1.min.js"></script>
+    <script src="js/loading.js"></script>
   </head>
 
-  <body>
+  <body onload="init()">
+    <div class="loading">
+      <div class="loading_img">
+        <img src="images/loading.png" />
+        <p></p>
+      </div>
+    </div>
     <!-- // 展示跳窗 // -->
     <div class="btn_intro_close">
       <img src="images/btn_close01.png" width="100%" />
@@ -104,192 +116,225 @@
     </div>
 
     <div class="wrapper">
-        <!-- // 背景雲 // -->         
-        <img src="images/cloud01.png" id="cloud1" data-0="top:100px"  data-400="top:-100px">
-        <img src="images/cloud02.png" id="cloud2" data-0="top:50px"  data-400="top:-100px">
-        <img src="images/cloud01.png" id="cloud3" data-0="top:680px" data-600="top:-200px">
-        <img src="images/cloud01.png" id="cloud4" data-0="top:800px"  data-900="top:-100px">
-        <img src="images/cloud02.png" id="cloud5" data-0="top:1250px"  data-1000="top:-100px">
-        <img src="images/cloud01.png" id="cloud6" data-0="top:1880px" data-1500="top:-200px">
-    <header>
-      <div class="header">
-        <div class="logo">HSIN-LAN CHENG</div>
-        <!-- // 版頭選單列 // -->
-        <nav class="nav">
-          <p id="about"><a href="#">about me</a></p>
-          <p id="works"><a href="#">works</a></p>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- // 簡介區 // -->
-      <div class="about">
-        <div class="intro">
-          <p class="hi"  id="hi" data-0="top:80px" data-250="top:80px" data-400="top:900px"></p>
-          <p class="pic" id="pic" data-0="top:545px" data-250="top:545px" data-400="top:1200px"></p>
+      <!-- // 背景雲 // -->
+      <img
+        src="images/cloud01.png"
+        id="cloud1"
+        data-0="top:100px"
+        data-400="top:-100px"
+      />
+      <img
+        src="images/cloud02.png"
+        id="cloud2"
+        data-0="top:50px"
+        data-400="top:-100px"
+      />
+      <img
+        src="images/cloud01.png"
+        id="cloud3"
+        data-0="top:680px"
+        data-600="top:-200px"
+      />
+      <img
+        src="images/cloud01.png"
+        id="cloud4"
+        data-0="top:800px"
+        data-900="top:-100px"
+      />
+      <img
+        src="images/cloud02.png"
+        id="cloud5"
+        data-0="top:1250px"
+        data-1000="top:-100px"
+      />
+      <img
+        src="images/cloud01.png"
+        id="cloud6"
+        data-0="top:1880px"
+        data-1500="top:-200px"
+      />
+      <header>
+        <div class="header">
+          <div class="logo">HSIN-LAN CHENG</div>
+          <!-- // 版頭選單列 // -->
+          <nav class="nav">
+            <p id="about"><a href="#">about me</a></p>
+            <p id="works"><a href="#">works</a></p>
+          </nav>
         </div>
+      </header>
 
-
-      </div>
-      <!-- // 作品展示區 // -->
-      <div class="works">
-        <div
-          class="span1 banner1"
-          onMouseOver="rollover2(0);"
-          onMouseOut="rollout2(0);"
-        >
-          <img class="tip" src="images/banner_01.png" />
-          <img src="images/banner_01.jpg" />
+      <main>
+        <!-- // 簡介區 // -->
+        <div class="about">
+          <div class="intro">
+            <p
+              class="hi"
+              id="hi"
+              data-0="top:80px"
+              data-250="top:80px"
+              data-400="top:900px"
+            ></p>
+            <p
+              class="pic"
+              id="pic"
+              data-0="top:545px"
+              data-250="top:545px"
+              data-400="top:1200px"
+            ></p>
+          </div>
         </div>
-        <div
-          class="span1 banner2"
-          onMouseOver="rollover2(1);"
-          onMouseOut="rollout2(1);"
-        >
-          <img class="tip" src="images/banner_02.png" />
-          <img src="images/banner_02.jpg" />
-        </div>
+        <!-- // 作品展示區 // -->
+        <div class="works">
+          <div
+            class="span1 banner1"
+            onMouseOver="rollover2(0);"
+            onMouseOut="rollout2(0);"
+          >
+            <img class="tip" src="images/banner_01.png" />
+            <img src="images/banner_01.jpg" />
+          </div>
+          <div
+            class="span1 banner2"
+            onMouseOver="rollover2(1);"
+            onMouseOut="rollout2(1);"
+          >
+            <img class="tip" src="images/banner_02.png" />
+            <img src="images/banner_02.jpg" />
+          </div>
 
-        <div
-          class="span1 banner3"
-          onMouseOver="rollover2(2);"
-          onMouseOut="rollout2(2);"
-        >
-          <img class="tip" src="images/banner_03.png" />
-          <img src="images/banner_03.jpg" />
-        </div>
+          <div
+            class="span1 banner3"
+            onMouseOver="rollover2(2);"
+            onMouseOut="rollout2(2);"
+          >
+            <img class="tip" src="images/banner_03.png" />
+            <img src="images/banner_03.jpg" />
+          </div>
 
-        <div
-          class="span1 banner4"
-          onMouseOver="rollover2(3);"
-          onMouseOut="rollout2(3);"
-        >
-          <img class="tip" src="images/banner_04.png" />
-          <img src="images/banner_04.jpg" />
-        </div>
+          <div
+            class="span1 banner4"
+            onMouseOver="rollover2(3);"
+            onMouseOut="rollout2(3);"
+          >
+            <img class="tip" src="images/banner_04.png" />
+            <img src="images/banner_04.jpg" />
+          </div>
 
-        <div
-          class="span1 banner5"
-          onMouseOver="rollover2(4);"
-          onMouseOut="rollout2(4);"
-        >
-          <img class="tip" src="images/banner_05.png" />
-          <img src="images/banner_05.jpg" />
-        </div>
+          <div
+            class="span1 banner5"
+            onMouseOver="rollover2(4);"
+            onMouseOut="rollout2(4);"
+          >
+            <img class="tip" src="images/banner_05.png" />
+            <img src="images/banner_05.jpg" />
+          </div>
 
-        <div
-          class="span1 banner6"
-          onMouseOver="rollover2(5);"
-          onMouseOut="rollout2(5);"
-        >
-          <img class="tip" src="images/banner_06.png" />
-          <img src="images/banner_06.jpg" />
-        </div>
+          <div
+            class="span1 banner6"
+            onMouseOver="rollover2(5);"
+            onMouseOut="rollout2(5);"
+          >
+            <img class="tip" src="images/banner_06.png" />
+            <img src="images/banner_06.jpg" />
+          </div>
 
-        <div
-          class="span1 banner7"
-          onMouseOver="rollover2(6);"
-          onMouseOut="rollout2(6);"
-        >
-          <img class="tip" src="images/banner_07.png" />
-          <img src="images/banner_07.jpg" />
-        </div>
+          <div
+            class="span1 banner7"
+            onMouseOver="rollover2(6);"
+            onMouseOut="rollout2(6);"
+          >
+            <img class="tip" src="images/banner_07.png" />
+            <img src="images/banner_07.jpg" />
+          </div>
 
-        <div
-          class="span1 banner8"
-          onMouseOver="rollover2(7);"
-          onMouseOut="rollout2(7);"
-        >
-          <img class="tip" src="images/banner_08.png" />
-          <img src="images/banner_08.jpg" />
-        </div>
+          <div
+            class="span1 banner8"
+            onMouseOver="rollover2(7);"
+            onMouseOut="rollout2(7);"
+          >
+            <img class="tip" src="images/banner_08.png" />
+            <img src="images/banner_08.jpg" />
+          </div>
 
-        <div
-          class="span1 banner9"
-          onMouseOver="rollover2(8);"
-          onMouseOut="rollout2(8);"
-        >
-          <img class="tip" src="images/banner_09.png" />
-          <img src="images/banner_09.jpg" />
-        </div>
+          <div
+            class="span1 banner9"
+            onMouseOver="rollover2(8);"
+            onMouseOut="rollout2(8);"
+          >
+            <img class="tip" src="images/banner_09.png" />
+            <img src="images/banner_09.jpg" />
+          </div>
 
-        <div
-          class="span1 banner10"
-          onMouseOver="rollover2(9);"
-          onMouseOut="rollout2(9);"
-        >
-          <img class="tip" src="images/banner_10.png" />
-          <img src="images/banner_10.jpg" />
-        </div>
+          <div
+            class="span1 banner10"
+            onMouseOver="rollover2(9);"
+            onMouseOut="rollout2(9);"
+          >
+            <img class="tip" src="images/banner_10.png" />
+            <img src="images/banner_10.jpg" />
+          </div>
 
-        <div
-          class="span1 banner11"
-          onMouseOver="rollover2(10);"
-          onMouseOut="rollout2(10);"
-        >
-          <img class="tip" src="images/banner_11.png" />
-          <img src="images/banner_11.jpg" />
-        </div>
+          <div
+            class="span1 banner11"
+            onMouseOver="rollover2(10);"
+            onMouseOut="rollout2(10);"
+          >
+            <img class="tip" src="images/banner_11.png" />
+            <img src="images/banner_11.jpg" />
+          </div>
 
-        <div
-          class="span1 banner12"
-          onMouseOver="rollover2(11);"
-          onMouseOut="rollout2(11);"
-        >
-          <img class="tip" src="images/banner_12.png" />
-          <img src="images/banner_12.jpg" />
-        </div>
+          <div
+            class="span1 banner12"
+            onMouseOver="rollover2(11);"
+            onMouseOut="rollout2(11);"
+          >
+            <img class="tip" src="images/banner_12.png" />
+            <img src="images/banner_12.jpg" />
+          </div>
 
-        <div
-          class="span1 banner13"
-          onMouseOver="rollover2(12);"
-          onMouseOut="rollout2(12);"
-        >
-          <img class="tip" src="images/banner_13.png" />
-          <img src="images/banner_13.jpg" />
-        </div>
+          <div
+            class="span1 banner13"
+            onMouseOver="rollover2(12);"
+            onMouseOut="rollout2(12);"
+          >
+            <img class="tip" src="images/banner_13.png" />
+            <img src="images/banner_13.jpg" />
+          </div>
 
-        <div
-          class="span1 banner14"
-          onMouseOver="rollover2(13);"
-          onMouseOut="rollout2(13);"
-        >
-          <img class="tip" src="images/banner_14.png" />
-          <img src="images/banner_14.jpg" />
-        </div>
+          <div
+            class="span1 banner14"
+            onMouseOver="rollover2(13);"
+            onMouseOut="rollout2(13);"
+          >
+            <img class="tip" src="images/banner_14.png" />
+            <img src="images/banner_14.jpg" />
+          </div>
 
-        <div
-          class="span1 banner15"
-          onMouseOver="rollover2(14);"
-          onMouseOut="rollout2(14);"
-        >
-          <img class="tip" src="images/banner_15.png" />
-          <img src="images/banner_15.jpg" />
-        </div>
+          <div
+            class="span1 banner15"
+            onMouseOver="rollover2(14);"
+            onMouseOut="rollout2(14);"
+          >
+            <img class="tip" src="images/banner_15.png" />
+            <img src="images/banner_15.jpg" />
+          </div>
 
-        <div
-          class="span1 banner16"
-          onMouseOver="rollover2(15);"
-          onMouseOut="rollout2(15);"
-        >
-          <img class="tip" src="images/banner_16.png" />
-          <img src="images/banner_16.jpg" />
+          <div
+            class="span1 banner16"
+            onMouseOver="rollover2(15);"
+            onMouseOut="rollout2(15);"
+          >
+            <img class="tip" src="images/banner_16.png" />
+            <img src="images/banner_16.jpg" />
+          </div>
         </div>
-
-      </div>
-  
-    </main>
-         
+      </main>
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
-    <script src="js/jquery.mCustomScrollbar.js"></script>
     <script src="js/skrollr.min.js"></script>
     <script src="js/js.js"></script>
     <script type="text/javascript">
-    var skrollr_obj = skrollr.init();
+      var skrollr_obj = skrollr.init();
     </script>
-</body>
   </body>
 </html>
