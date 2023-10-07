@@ -2117,6 +2117,10 @@ main .about .intro .pic {
   background-size: 100% auto;
   margin: 0 auto;
 }
+main .works {
+  height: 100%;
+  background-color: #000000;
+}
 main .works .title {
   background-color: #ffffff;
   width: 100%;
