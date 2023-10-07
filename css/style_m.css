@@ -2121,6 +2121,11 @@ main .works {
   height: 100%;
   background-color: #000000;
 }
+main .works img {
+  display: block;
+  width: 100%;
+  float: left;
+}
 main .works .title {
   background-color: #ffffff;
   width: 100%;
