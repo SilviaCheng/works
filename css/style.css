@@ -2539,6 +2539,32 @@ main .works {
     width: 65px;
   }
 }
+@media (max-width: 1280px) {
+  .wrapper {
+    width: 1136px;
+  }
+  .wrapper #cloud2,
+  .wrapper #cloud4,
+  .wrapper #cloud6 {
+    display: none;
+  }
+  .wrapper #cloud3 {
+    left: 250px;
+  }
+  main {
+    width: 1136px;
+    max-width: 1136px;
+  }
+  main .about {
+    width: 1136px;
+  }
+  main .about .intro .hi {
+    left: 103px;
+  }
+  main .about .intro .pic {
+    left: 310px;
+  }
+}
 @media (max-width: 1080px) {
   .span1 {
     margin: 10px;
