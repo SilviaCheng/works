@@ -2535,7 +2535,7 @@ main .works {
   margin: 20px;
 }
 
-@media (max-height: 728px) {
+@media (max-height: 730px) {
   main .about .intro .hi {
     width: 640px;
     height: 380px;
