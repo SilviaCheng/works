@@ -18,7 +18,7 @@ $(function () {
     "images/b14_open.jpg",
     "images/b15_open.jpg",
     "images/b16_open.jpg",
-    "images/b00_open.jpg",
+    "images/b17_open.jpg",
   ];
 
   queue.on("complete", function (event) {
