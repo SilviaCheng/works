@@ -2535,6 +2535,23 @@ main .works {
   margin: 20px;
 }
 
+@media (max-height: 728px) {
+  main .about .intro .hi {
+    width: 640px;
+    height: 380px;
+    transform: translate(20%, 0%);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  main .about .intro .pic {
+    width: 350px;
+    height: 250px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    top: 450px;
+    opacity: 1;
+  }
+}
 @media (max-width: 1440px) {
   main .about .intro .hi {
     width: 640px;
