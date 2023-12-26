@@ -29,7 +29,7 @@ $(function () {
       $("#cloud4").animate({ left: "980px", opacity: 1 }, 700);
 
       $(".hi").delay(500).animate({ top: 80, opacity: 1 }, 1000);
-      $(".pic").delay(200).animate({ top: "545px", opacity: 1 }, 800);
+      $(".pic").delay(200).animate({ opacity: 1 }, 800);
       /*** 開場動畫 ***/
       firstAnimate();
     });
