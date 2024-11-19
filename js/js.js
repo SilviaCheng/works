@@ -124,44 +124,7 @@ function rollout2(banner) {
 }
 
 function rollover(web) {
-  var PageWidth;
-  var WIN = $(window);
-  function goResize() {
-    //抓取視窗寬高
-    PageWidth = WIN.innerWidth();
-  }
 
-  goResize();
-
-  if (PageWidth <= 640) {
-    $(webArray[web] + " img").css({ borderRadius: "115px" });
-    $(webArray[web] + " img")
-      .stop()
-      .animate(
-        {
-          width: "3.2rem",
-          height: "3.2rem",
-          left: "0.2rem",
-          top: "0.2rem",
-          borderRadius: "3.2rem",
-        },
-        "fast"
-      );
-
-    $(webArray[web] + " .tip")
-      .stop()
-      .animate(
-        {
-          opacity: "1",
-          width: "2rem",
-          height: "2rem",
-          left: "0.61rem",
-          top: "0.61rem",
-          borderRadius: "2rem",
-        },
-        "fast"
-      );
-  } else if (PageWidth >= 640) {
     $(webArray[web] + " img").css({ borderRadius: "115px" });
     $(webArray[web] + " img")
       .stop()
@@ -190,19 +153,11 @@ function rollover(web) {
         "fast"
       );
   }
-}
+
 
 function rollout(web) {
-  var PageWidth;
-  var WIN = $(window);
-  function goResize() {
-    //抓取視窗寬高
-    PageWidth = WIN.innerWidth();
-  }
 
-  goResize();
 
-  if (PageWidth <= 640) {
     $(webArray[web] + " img")
       .stop()
       .animate(
@@ -228,7 +183,6 @@ function rollout(web) {
         },
         "fast"
       );
-  } else if (PageWidth >= 640) {
     $(webArray[web] + " img")
       .stop()
       .animate(
@@ -255,7 +209,7 @@ function rollout(web) {
         "fast"
       );
   }
-}
+
 
 /*// 雙行rem備份 //
 function rollover(web) {
@@ -384,15 +338,9 @@ $(function () {
     //抓取視窗寬高
     PageWidth = WIN.innerWidth();
 
-    if (PageWidth <= 960) {
-      $("#others").attr("src", "images/others_mobile.png");
-
-      $("#PIC").attr("src", "images/text1_mobile.png");
-    } else if (PageWidth >= 960) {
-      $("#others").attr("src", "images/others.png");
-
-      $("#PIC").attr("src", "images/text1.png");
-    }
+    if (PageWidth <= 640) {
+      location.href = "https://silviacheng.github.io/works/mobile.html";
+    } 
   }
 
   //拉動視窗時,執行goResize
